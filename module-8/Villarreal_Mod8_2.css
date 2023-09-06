@@ -1,0 +1,64 @@
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+h1 {
+    color: white; 
+	background-color: #4d94ff; 
+    font-size: 28px; 
+}
+.card {
+	 width: 50%;  
+    background-color: #e6f7ff; 
+    border: 1px solid #99c2ff; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+}
+
+.card-title {
+    background-color: #4d94ff; 
+    color: #ffffff; 
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 3px; 
+	text-align: center; 
+}
+
+.card-content {
+    background-color: #cce0ff; 
+    padding: 20px;
+    border-radius: 3px; 
+}
+
+#movies th {
+    background-color: #0073e6; 
+    color: #ffffff; 
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#movies td {
+    border: 1px solid #99c2ff;
+    padding: 8px;
+}
+footer {
+    left: 0;
+    background-color: #4d94ff;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+footer p, footer a {
+    color: #003366; 
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+	font-style: italic;
+}
+.container {
+    margin: 2% 5% 100px 5%;
+}
