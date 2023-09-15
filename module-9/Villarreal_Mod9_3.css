@@ -1,0 +1,18 @@
+.grey-background {
+    background-color: grey;
+}
+footer {
+    text-align: Right;
+    margin-top: 60px;
+    background-color: grey;
+    padding: 10px;
+	font-size: 40px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+	font-size: 20px;
+}
+h1 {
+    color: blue;
+	font-size: 50px;

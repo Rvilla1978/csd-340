@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	 <meta charset="UTF-8">
+    <meta name="description" content="Replace Text">
+    
+	
+	<link rel="stylesheet" href="Villarreal_Mod9_3.css">
+	
+	<title>CSD 340 Development with HTML and CSS</title>
+  <script>
+        function replaceText(tagNumber, value) {
+            document.getElementById('span' + tagNumber).textContent = value;
+        }
+    </script>
+</head>
+<div class="grey-background">
+<body>
+	<div id="container"></div>
+	
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+	
+	<h2>"Glengarry Glen Ross (1992)"</h2>
+	
+	<p class="intro">	
+BLAKE (loudly, to everyone): Let me have your attention for a moment. So you’re talking about what? 
+You’re talking about [he puts out his cigarette] bitching about that sale you shot, some <span id="span1">_______</span> that doesn’t want to buy, 
+somebody that doesn’t want what you’re selling, some <span id="span2">_______</span> you’re trying to screw, and so forth.
+</p>
+<p>
+BLAKE (to Williamson): Let’s talk about something important. Are they all here?
+</p>
+<p>
+WILLIAMSON: All but one.
+</p>
+<p>
+BLAKE: Well, I’m going anyway.
+</p>
+<p>
+BLAKE (to everyone): Let’s talk about something <span id="span3">_______</span>!
+</p>
+<p>
+BLAKE (to Levene, who is attempting to pour himself a cup of coffee): Put. That coffee. Down! Coffee’s for closers only.
+</p>
+<p>
+BLAKE (to Levene): Do you think I’m fucking with you?
+</p>
+<p>
+BLAKE (to Levene): I am not fucking with you. I’m here from downtown. I’m here from Mitch and Murray.
+</p>
+<p>
+BLAKE (to the entire office): And I’m here on a mission of mercy!
+</p>
+<p>
+BLAKE (to Levene): Your name’s Levene?
+</p>
+<p>
+Levene: Yeah.
+</p>
+<p>
+Blake: You call yourself a salesman, you, son of a bitch?
+</p>
+<p>
+MOSS: I don’t gotta listen to this shit.
+</p>
+<p>
+BLAKE: You certainly don’t, pal.
+</p>
+<p>
+BLAKE (still to Moss): ’Cause the good news is you’re <span id="span4">_____</span>.
+</p>
+<p>
+BLAKE (to Moss, then to everyone): The bad news is you’ve got, all you got, just one week to regain your jobs, starting tonight. Starting with tonight’s sit.
+</p>
+<p>
+BLAKE (to everyone): Oh, have I got your attention now?
+</p>
+<p>
+BLAKE (still to everyone): Good. ’Cause we’re adding a little something to this month’s sales contest. As you all know, first prize is a Cadillac Eldorado.
+</p>
+<p>
+BLAKE (still to everyone): Anyone want to see second prize? Second prize’s a set of steak knives.
+</p>
+<p>
+BLAKE (still to everyone): Third prize is you’re fired.
+</p>
+<p>
+BLAKE (still to everyone): You get the picture? Are you laughing now? You got leads. Mitch and Murray paid good money. Get their names to sell them!
+</p>
+<p>
+BLAKE (still to everyone): You can’t close the leads you’re given, you can’t close shit, you ARE shit. Hit the bricks, pal, and beat it, ’cause you are going out!
+</p>
+
+    <button onclick="replaceText(1, word1)">son of a bitch</button>
+    <button onclick="replaceText(2, word2)">broad</button>
+    <button onclick="replaceText(3, word3)">important</button>
+	<button onclick="replaceText(4, word4)">fired</button>
+	
+	<script>
+        let word1 = "son of a bitch";
+        let word2 = "broad";
+        let word3 = "important";
+		let word4 = "fired";
+	</script>	
+	<hr >
+
+	<address>
+	Bellevue University<br>
+	1000 Galvin Road South<br>
+	Bellevue, NE 68005<br>
+	<a href="https://www.bellevue.edu/">https://www.bellevue.edu/</a>
+	</address>
+
+<footer>
+        <p><a href="../index.html">Back to the portal page</a></p>
+    </footer>
+ </div>
+</body>
+
+</html>
