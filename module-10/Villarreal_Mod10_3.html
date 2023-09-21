@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Villarreal_Mod10_3.css">
+</head>
+<body>
+<div id="container">
+        <h1 style="text-align: center;">Assignment 10.3: JavaScript - Part 2</h1>
+<div class="image-container" onmouseover="showBack(this)" onmouseout="showFront(this)">
+    <img src="images/md30774614303.jpg" alt="The Shawshank Redemption A" class="front-image">
+    <img src="images/shawshank2.jpg" alt="The Shawshank Redemption B" class="back-image">
+</div>
+<div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';"
+         style="font-size: 32px;">
+      The Shawshank Redemption   
+ <br />
+   </div>  
+<div class="image-container" onmouseover="showBack(this)" onmouseout="showFront(this)">
+    <img src="images/4117PWF91KL.jpg" alt="It A" class="front-image">
+    <img src="images/it-1.jpg" alt="It B" class="back-image">
+</div>
+<div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';"
+         style="font-size: 32px;">
+      IT
+      <br />
+    </div>
+<div class="image-container" onmouseover="showBack(this)" onmouseout="showFront(this)">
+    <img src="images/51Fn3c3mMEL.jpg" alt="The Princess Bride A" class="front-image">
+    <img src="images/film__3025-the-princess-bride--hi_res-02a8b407.jpg" alt="The Princess Bride B" class="back-image">
+</div>
+<div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';"
+         style="font-size: 32px;">
+      The Princess Bride
+      <br />
+
+    </div>
+<script>
+function changeBackground(color) {
+    document.body.style.backgroundColor = color;
+}
+function showBack(element) {
+    const frontImage = element.querySelector('.front-image');
+    const backImage = element.querySelector('.back-image');
+
+    frontImage.style.opacity = 0;
+    backImage.style.opacity = 1;
+}
+
+function showFront(element) {
+    const frontImage = element.querySelector('.front-image');
+    const backImage = element.querySelector('.back-image');
+
+    frontImage.style.opacity = 1;
+    backImage.style.opacity = 0;
+}
+</script>
+
+</body>
+</html>
