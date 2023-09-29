@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            background-color: #add8e6;  /* Light Blue */
+        }
+
+        h1 {
+            background-color: #d3d3d3;  /* Light Gray */
+            padding: 10px;
+        }
+
+        #displayList li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+<p>Welcome, create your to-do list that you can add and remove from either the last entry, or any entry selected.</p> 
+<p>Click display for a dialog box with your list, when you delete the last entry you will receive a message. Enjoy!</p>
+
+<input type="text" id="inputText" placeholder="Enter your task">
+<button onclick="addItem()">Add</button>
+<button onclick="deleteLastEntry()">Delete Last Entry</button>
+<button onclick="displayItems()">Display</button>
+
+<hr>  <!-- Horizontal Line -->
+
+<ul id="displayList"></ul>
+
+<script>
+    const todoList = [];
+
+    function addItem() {
+        const item = document.getElementById("inputText").value;
+
+        if (item.trim() !== '') {
+            todoList.push(item);
+            updateList();
+            document.getElementById("inputText").value = '';  // Clear the input box
+        } else {
+            alert('Please enter a valid task.');
+        }
+    }
+
+    function deleteLastEntry() {
+        if (todoList.length > 0) {
+            todoList.pop();
+            updateList();
+
+            // Check if the list is now empty after the deletion
+            if (todoList.length === 0) {
+                alert("Congratulations, you have finished");
+            }
+        } else {
+            alert('Nothing to delete.');
+        }
+    }
+
+    function deleteSpecificEntry(index) {
+        if (index >= 0 && index < todoList.length) {
+            todoList.splice(index, 1);
+            updateList();
+
+            // Check if the list is now empty after the deletion
+            if (todoList.length === 0) {
+                alert("Congratulations, you have finished");
+            }
+        }
+    }
+
+    function displayItems() {
+        let display = "";
+        for (let i = 0; i < todoList.length; i++) {
+            display += `${i + 1}. ${todoList[i]}\n`;
+        }
+        alert(display);
+    }
+
+    function updateList() {
+        const ul = document.getElementById("displayList");
+        ul.innerHTML = '';  // Clear previous items
+
+        for (let i = 0; i < todoList.length; i++) {
+            const li = document.createElement('li');
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = '-';
+            deleteButton.onclick = function() { deleteSpecificEntry(i); };
+            li.appendChild(deleteButton);
+            const taskText = document.createTextNode(` ${i+1}. ${todoList[i]}`);
+            li.appendChild(taskText);
+            ul.appendChild(li);
+        }
+    }
+</script>
+	<footer style="position: fixed; bottom: 0; right: 0; padding: 10px; background-color: rgba(255, 255, 255, 0.8);">
+        <a href="../index.html" class="right-aligned">Back to Landing Page</a>
+	</footer>	
+</body>
+</html>
